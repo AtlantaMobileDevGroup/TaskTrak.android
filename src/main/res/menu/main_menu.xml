@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_add"
+          android:showAsAction="always"
+          android:id="@+id/add_task"
+          android:title="Add Task" />
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@+id/open_pref" android:title="Preferences" />
+</menu>

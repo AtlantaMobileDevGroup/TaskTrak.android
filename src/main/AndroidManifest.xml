@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cajuncode.tasktrak">
+
+    <application
+        android:name="com.activeandroid.app.Application"
+        android:icon="@drawable/android:star_big_on"
+        android:label="@string/app_name"
+        android:debuggable="true">
+
+        <activity android:label="@string/app_name" android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".TaskPrefActivity" />
+        <activity android:name=".AddTask" />
+
+
+        <meta-data android:name="AA_DB_NAME" android:value="tasktrak.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="1" />
+    </application>
+
+    <uses-sdk android:minSdkVersion="15"/>
+</manifest>
