@@ -5,7 +5,7 @@ import _root_.android.os.Bundle
 import android.view.{View, MenuItem, MenuInflater, Menu}
 import android.content.Intent
 import android.widget.{AdapterView, ArrayAdapter, ListView}
-import com.cajuncode.tasktrak.models.Task
+import com.cajuncode.tasktrak.models.{User, Task}
 import android.widget.AdapterView.OnItemClickListener
 
 class MainActivity extends Activity with TypedActivity {
@@ -15,6 +15,7 @@ class MainActivity extends Activity with TypedActivity {
   override def onCreate(bundle: Bundle) {
     super.onCreate(bundle)
     setContentView(R.layout.main)
+    User.context = getApplicationContext()
     taskList = findView(TR.taskListView)
     val adapter:ArrayAdapter[Task] = new ArrayAdapter[Task](this, R.layout.taskrow,R.id.row_title, Task.getAll())
     taskList.setAdapter(adapter)
@@ -41,6 +42,10 @@ class MainActivity extends Activity with TypedActivity {
     }
     if (item.getItemId == R.id.add_task){
       openTask(null)
+    }
+    if (item.getItemId == R.id.open_login){
+      val intent:Intent = new Intent(this, classOf[LoginActivity])
+      startActivity(intent)
     }
     return true;
   }

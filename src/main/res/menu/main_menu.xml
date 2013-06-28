@@ -6,4 +6,5 @@
           android:id="@+id/add_task"
           android:title="Add Task" />
     <item android:icon="@android:drawable/ic_menu_preferences" android:id="@+id/open_pref" android:title="Preferences" />
+    <item android:icon="@android:drawable/ic_menu_compass" android:id="@+id/open_login" android:title="Login" />
 </menu>

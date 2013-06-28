@@ -15,11 +15,12 @@
         </activity>
         <activity android:name=".TaskPrefActivity" />
         <activity android:name=".AddTask" />
+        <activity android:name=".LoginActivity" />
 
 
         <meta-data android:name="AA_DB_NAME" android:value="tasktrak.db" />
         <meta-data android:name="AA_DB_VERSION" android:value="1" />
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-sdk android:minSdkVersion="15"/>
 </manifest>
